@@ -19,12 +19,15 @@
 
     <div class="form-side">
       <h2>Login to SkyBlue Contacts</h2>
-      <form id="loginForm">
-        <input type="text" placeholder="Email or Username" id="username" required />
-        <input type="password" placeholder="Password" id="password" required />
-        <button type="submit" class="login-btn">Login</button>
-      </form>
+      <form id="loginForm" onsubmit="return validateLogin()">
+  <input type="text" placeholder="Email or Username" id="email" />
+  <div class="error-message" id="emailError"></div>
 
+  <input type="password" placeholder="Password" id="password" />
+  <div class="error-message" id="passwordError"></div>
+
+  <button type="submit" class="login-btn">Login</button>
+</form>
       <div class="links">
         <a href="#">Forgot Password?</a>
         <a href="#" class="animated-link">Create an Account</a>
