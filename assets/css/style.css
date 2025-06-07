@@ -152,3 +152,18 @@ input {
   color: #0077cc;
   font-family: 'Segoe UI', sans-serif;
 }
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin: 0px 0px 6px 5px; /* TOP RIGHT BOTTOM LEFT */
+  padding: 0;
+  line-height: 1;
+}
+
+.input-error {
+  border: 2px solid red !important;
+  outline: none;
+  margin-bottom: 2px; /* reduce space between input and error */
+}
+
