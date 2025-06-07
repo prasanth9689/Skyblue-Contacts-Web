@@ -16,7 +16,7 @@ function validateLogin() {
   let isValid = true;
 
   if (email === "") {
-    emailError.textContent = "Email is required.";
+    emailError.textContent = "Email or Username is required.";
     emailField.classList.add("input-error");
     isValid = false;
   } else {

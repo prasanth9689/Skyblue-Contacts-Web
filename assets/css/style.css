@@ -156,12 +156,14 @@ input {
 .error-message {
   color: red;
   font-size: 14px;
-  margin-top: 2px;   /* Less space between input and error */
-  margin-bottom: 8px;
-  margin-left: 4px;
+  margin: 0px 0px 6px 5px; /* TOP RIGHT BOTTOM LEFT */
+  padding: 0;
+  line-height: 1;
 }
 
 .input-error {
   border: 2px solid red !important;
   outline: none;
+  margin-bottom: 2px; /* reduce space between input and error */
 }
+
