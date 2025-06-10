@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #e0f7ff;
+  background: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,29 +40,33 @@ body {
 }
 
 h2 {
-  color: #0077cc;
+  color: #08273E;
   margin-bottom: 20px;
 }
 
 input {
   width: 100%;
   padding: 12px;
-  margin: 10px 0;
-  border-radius: 8px;
+  margin-bottom: 6px;
   border: 1px solid #ccc;
-  font-size: 16px;
+  border-radius: 6px;
+  box-sizing: border-box;
 }
 
 .login-btn {
+  width: 100%;
+  box-sizing: border-box;   /* Ensures padding doesn't reduce width */
   padding: 12px;
-  background: #0077cc;
+  margin-top: 10px;
+  background-color: #08273E;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   font-size: 16px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: 0.3s;
 }
+
 
 .login-btn:hover {
   background: #005fa3;
@@ -76,7 +80,7 @@ input {
 
 .links a {
   text-decoration: none;
-  color: #0077cc;
+  color: #555758;
   font-weight: 500;
   position: relative;
 }
@@ -113,7 +117,7 @@ input {
 .brand-name {
   font-size: 22px;
   font-weight: bold;
-  color: #0077cc;
+  color: #08273E;
   font-family: 'Segoe UI', sans-serif;
 }
 
@@ -149,17 +153,17 @@ input {
 .logo-area-fixed .brand-name {
   font-size: 26px;
   font-weight: bold;
-  color: #0077cc;
+  color: #08273E;
   font-family: 'Segoe UI', sans-serif;
 }
 
 .error-message {
   color: red;
-  font-size: 14px;
-  margin: 0px 0px 6px 5px; /* TOP RIGHT BOTTOM LEFT */
-  padding: 0;
-  line-height: 1;
+  font-size: 13px;
+  margin-top: 4px;
+  margin-bottom: 8px; /* This adds spacing before the login button */
 }
+
 
 .input-error {
   border: 2px solid red !important;
@@ -167,3 +171,42 @@ input {
   margin-bottom: 2px; /* reduce space between input and error */
 }
 
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    width: 90%;
+    padding: 20px;
+    margin: auto;
+  }
+
+  .image-side {
+    display: none; /* Hide the left image for mobile */
+  }
+
+  .form-side {
+    width: 100%;
+    padding: 0;
+  }
+
+  .login-btn {
+    font-size: 15px;
+  }
+
+  .logo-area-fixed {
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .brand-name {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .login-container {
+    flex-direction: column;
+    width: 90%;
+    padding: 20px;
+    margin: 20px;
+  }
+}
